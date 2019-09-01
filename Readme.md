@@ -28,12 +28,16 @@ As in any brainfuck program all the data are stored in an array (and this is the
     [0] : counts the number of elements in the input array
     [1],[2] : temporary space used for comparing two elements
     [3],[4] : used for comparing two elements
-    [5],[6] : pivot that separated the input from the first five cells
+    [5],[6] : pivot that separates the input from the first five cells
     [7] : temporary space required for each phase of the sorting
     [8]...[8+n-1] : the input array
     [8+n],[9+n] : temporary space used while reading input elements
 
-
+A few notes about this implementation:
+* this implementation is far from optimal,
+* It works on all alphanumerical characters and some additional ones as well (basically 127>ASCII>32 since [delete] cannot be printed to the output),
+* [space] i.e. ASCII=32 is reserved to mark the end of the input; the user is asked to provide a sequence of elements finished with the [space],
+* in the worst case bubble sort requires n (number of elements) phases to sort an array; this information is utilized here to perform exactly n phases on any input therefore assuring the correct order of the elements at the end; in each phase two consecutive elements are compared and swapped, if necessary,
 
 ## Repository
 This repository contains four files:
