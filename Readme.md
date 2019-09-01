@@ -37,7 +37,58 @@ A few notes about this implementation:
 * this implementation is far from optimal,
 * It works on all alphanumerical characters and some additional ones as well (basically 127>ASCII>32 since [delete] cannot be printed to the output),
 * [space] i.e. ASCII=32 is reserved to mark the end of the input; the user is asked to provide a sequence of elements finished with the [space],
-* in the worst case bubble sort requires n (number of elements) phases to sort an array; this information is utilized here to perform exactly n phases on any input therefore assuring the correct order of the elements at the end; in each phase two consecutive elements are compared and swapped, if necessary,
+* in the worst case bubble sort requires n-1 (number of elements) phases to sort an array; this information is utilised here to perform exactly n-1 phases on any input therefore assuring the correct order of the elements at the end; in each phase two consecutive elements are compared and swapped, if necessary,
+
+Overall description of the algorithm:
+
+    1. (read input)
+       start with i=8
+       read a character from the input to [i]
+       increment [0]
+       copy from [i] to [i+1] with the usage of [i+2]
+       test if [i+1] is [space] (ASCII==32)
+         NO:
+           i=i+1 and read the next character
+         YES:
+           reset [i]
+           decrement [0]
+       increment [6] (set pivot)
+       decrement [0]
+    2. (perform n-1 sorting phases)
+       test if [0]==0
+         NO:
+           2A. (start a single sorting phase)
+               decrement [0]
+               i=9
+               until [i]==0:
+                 copy [i-1] to [1] and [3]
+                 copy [i] to [2] and [4]
+                 copy [1] back to [i-1]
+                 copy [2] back to [i]
+                 increment [1]
+                 2A1. (compare two elements and swap if [i-1]>[i])
+                      until ([3]==0 OR [4]==0):
+                        decrement [3], decrement [4]
+                      case [4]==0:
+                        copy [i-1] to [i-2]
+                        copy [i] to [i-1]
+                        copy [i-2] to [i]
+                 2A2. (clear markers for the next comparison)
+                      decrement [1]
+                      reset [3], reset [4]
+                      copy [i-1] to [i-2]
+                      i=i+1
+               k=3
+               until i-k==5:
+                 copy [i-k] to [i-k+1]
+                 k=k+1
+               decrement [7], increment [6]
+         YES:
+           2B. (print the sorted array)
+               i=8
+               move to [i]
+               until [i]==0:
+                 print [i], i=i+1, move to [i]
 
 ## Repository
 This repository contains four files:
