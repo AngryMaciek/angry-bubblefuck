@@ -1,4 +1,6 @@
 # Bubblefuck
+> If hard things are hard why the easy ones cannot be hard as well?
+
 *Maciej Bak*  
 *Swiss Institute of Bioinformatics*
 
@@ -23,6 +25,13 @@ As in any brainfuck program all the data are stored in an array (and this is the
 
 ![array.png](https://raw.githubusercontent.com/AngryMaciek/bubblefuck/master/array.png)
 
+    [0] : counts the number of elements in the input array
+    [1],[2] : temporary space used for comparing two elements
+    [3],[4] : used for comparing two elements
+    [5],[6] : pivot that separated the input from the first five cells
+    [7] : temporary space required for each phase of the sorting
+    [8]...[8+n-1] : the input array
+    [8+n],[9+n] : temporary space used while reading input elements
 
 
 
