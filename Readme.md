@@ -10,9 +10,9 @@ Excellent description is available at the wikipedia: https://en.wikipedia.org/wi
 Even a better one at the esolangs wiki: https://esolangs.org/wiki/Brainfuck
 
 Interpreters:  
-* Brainfuck Machine (Windows), the software on which I developed this code. I highly recommend it as it provides much help during the debugging.
+* Brainfuck Machine (Windows), the software on which I developed this code. I highly recommend it as it provides much help during the debugging.  
 http://www.kacper.kwapisz.eu/index.php?i=19  
-* Online tools:
+* Online tools:  
 https://fatiherikli.github.io/brainfuck-visualizer  
 https://www.jdoodle.com/execute-brainfuck-online/
 
