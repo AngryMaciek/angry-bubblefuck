@@ -101,5 +101,5 @@ This repository contains four files:
 | LICENSE | The GNU General Public License v3.0 |
 
 ## License
-GNU General Public License
+GNU General Public License v3.0
 
