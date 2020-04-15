@@ -2,7 +2,6 @@
 > If hard things are hard why the easy ones cannot be hard as well?
 
 *Maciej Bak*  
-*Swiss Institute of Bioinformatics*
 
 A simple implementation of the bubble sort algorithm in brainfuck langauge. I designed it a few years ago for [Women in Technology](https://womenintechnology.pl/) workshops where I was teaching about esoteric programming languages. I decided to put it out for educational/inspirational purpose :)
 
