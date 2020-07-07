@@ -1,4 +1,4 @@
-# Bubblefuck
+# Angry Bubblefuck
 > If hard things are hard why the easy ones cannot be hard as well?
 
 *Maciej Bak*  
