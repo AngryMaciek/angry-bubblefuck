@@ -97,7 +97,7 @@ This repository contains four files:
 | README.md | (this file) |
 | array.png | Implementation scheme |
 | bubblesort.b | Brainfuck source code for the bubble sort |
-| LICENSE | The GNU General Public License v3.0 |
+| LICENSE | MIT License |
 
 ## License
 MIT License
